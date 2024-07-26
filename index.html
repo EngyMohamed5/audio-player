@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <script src="./bootstrap.bundle.min.js" defer></script>
+    <script src="./js.js" defer></script>
+</head>
+<body>
+    <style>
+        #play{
+            background-image: url(./img/play-svgrepo-com.png);
+            background-size: cover;
+        }
+        #prev{
+            background-image: url(./img/prev-svgrepo-com.png);
+            background-size: cover;
+        }
+
+        #next{
+            background-image: url(./img/next-svgrepo-com.png);
+            background-size: cover;
+        }
+
+        input[type=range]{
+            width: 100%;
+           
+        }
+        img{
+            object-fit: cover;
+            height: 17em;
+        }
+   
+    </style>
+
+    <article class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+        
+        <div class="card shadow  col-3" >
+            <img id="imgsrc" src="./img/cow.jpg" class="card-img-top" alt="...">
+            
+            <div class="col-12 card-body d-flex flex-column align-items-center gap-3">
+                <h5>song</h5>
+                <div class="cont">
+                    <button id ="prev" class="prev rounded-circle p-3 btn btn-primary"></button>
+                    <button id="play" class="play rounded-circle p-4 btn btn-primary" ></button>
+                    <button id ="next" class="next rounded-circle p-3 btn btn-primary"></button>
+                </div>
+                <input class="m-3" type="range" id="track" value="0">
+
+
+                <audio id="aud">
+                    <source id="audsrc" src="./audio/Doja Cat - MOOO! (Audio).mp3" >
+                </audio>
+                
+    
+            </div>
+        </div>
+    
+
+    </article>
+    
+</body>
+</html>
